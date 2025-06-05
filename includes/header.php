@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
@@ -22,4 +23,4 @@
             <li class="nav-list"><a href="./contact-us.php">Contact Us</a></li>
         </ul>
         <button>Partner With Us</button>
-    </header>
+    </header>    
