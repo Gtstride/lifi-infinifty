@@ -1,0 +1,91 @@
+@media (max-width: 868px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .contact-container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form .full-width,
+  .contact-form textarea,
+  .contact-form button {
+    grid-column: span 1;
+  }
+
+  .contact-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+
+  .left {
+    height: auto;
+    background: linear-gradient(to top, #ffffff, #e29fcc);
+  }
+
+  .right {
+    height: auto;
+    background: linear-gradient(to bottom, #9c3d7d, #ff543e);
+  }
+
+  .right img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .left #name {
+    margin-top: 4rem;
+  }
+
+  .left button {
+    width: 50%;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header h2 {
+    font-size: 1.3em;
+  }
+
+  .card-header i {
+    font-size: 1.5em;
+  }
+
+  .card-content p,
+  .social-item span {
+    font-size: 1rem;
+  }
+
+  .social-item {
+    justify-content: center;
+  }
+}

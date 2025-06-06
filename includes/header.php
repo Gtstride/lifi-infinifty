@@ -10,7 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/about-us.css">
+    <link rel="stylesheet" href="./styles/services.css">
+    <link rel="stylesheet" href="./styles/products.css">
+    <link rel="stylesheet" href="./styles/contact-us.css" />
+    <link rel="stylesheet" href="./styles/querie.css" />
+    <script
+        src="https://kit.fontawesome.com/47c9f80a38.js"
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
