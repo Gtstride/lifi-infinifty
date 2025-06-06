@@ -1,0 +1,206 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+/* main */
+main{
+    margin-bottom: 30px;
+}
+/**********hero**************/
+.hero-section{
+    width:100%;
+    background: linear-gradient( rgba(0, 0, 0,0.7), rgba(156, 61, 125,0.3), rgba(255, 255, 255,0.1)), url("../assets/images/about-banner.png");
+    height: 100vh;
+    background-size: cover;
+    padding-top: 50vh;
+}
+.hero-section img{
+    width: 100%;
+}
+.hero-section h1{
+    
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+/********second-section**********/
+.section-2{
+    justify-content: center;
+    /* text-align: center; */
+    padding-top: 30px;
+    background-color: #F6ECF2;
+    margin: 20px;
+    padding-bottom: 50px;
+    border-radius: 12px;
+}
+.section-2 span{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.section-2 p{
+    width: 60%;
+    /* border: 2px solid; */
+    margin: auto;
+    line-height: 30px;
+}
+/*******third section******/
+.section-3{
+    /* background-color: royalblue; */
+    /* flex-wrap: wrap; */
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    padding-top: 20px;
+}
+.section-3 span img{
+  background-color: #9c3d7d;
+  padding:10px 6px;
+    border-radius: 50%;
+    margin-right: 20px;
+   
+}
+.vision{
+    /* border: 2px solid; */
+    background-color: #ffe6e6;
+    width:50%;
+    border-radius: 12px;
+    text-align: right;
+    padding: 40px 10px;
+    justify-content: right;
+}
+.mission{
+    /* border: 2px solid; */
+    background-color: #ffe6e6;
+    width:50%;
+    border-radius: 12px;
+    text-align: left;
+    padding: 40px 10px;
+}
+.mission span{
+   display: flex;
+    align-items: center;
+    padding-bottom: 30px; 
+    justify-content: left;
+    padding-left: 30px;
+}
+.vision span{
+   display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    text-align: right;
+    justify-content: right;
+    padding-right: 30px;
+}
+
+.section-3 div span h1{
+    color: #9c3d7d;
+    font-size: 1.2rem;
+}
+.section-3 div p{
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 20px;
+}
+/******section4************/
+.section-4{
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+    padding-top: 50px;
+}
+.section-4 div{
+    width: 33%;
+    /* border: 2px solid; */
+    border-radius: 12px;
+    padding: 15px;
+    background-color: #f5ecf2;
+}
+.section-4 div span{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.section-4 div span img{
+    background-color: #9c3d7d;
+    padding: 8px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.section-4 div span h1{
+    font-size: 18px;
+    color: #9c3d7d;
+}
+.problem{
+     display: flex;
+    padding-bottom: 30px;
+    gap: 20px;
+}
+.explore-btn{
+    width: 20%;
+    margin-left: 40%;
+    border-radius: 24px;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #e28225;
+    border: none;
+}
+
+@media(max-width: 1000px){
+    .hero-section h1{
+    
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+    /* section-3 */
+ .section-3{
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.vision{
+    width:30rem;
+    text-align: center;
+}
+.mission{
+    width:30rem;
+    text-align: center;
+}   
+.mission span{ 
+    justify-content: center;
+}
+.vision span{
+     justify-content: center;
+}
+/* section-4 */
+.section-4{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.section-4 div{
+    width: 30rem;
+    padding: 15px;
+    margin-bottom: 20px;
+    /* text-align: center; */
+}
+.section-4 div span{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.section-4 div span h1{
+    font-size: 18px;
+}
+
+.explore-btn{
+    width:40%;
+    margin-left: 30%;
+    border-radius: 24px;
+    padding: 15px;
+    cursor: pointer;
+}
+}
