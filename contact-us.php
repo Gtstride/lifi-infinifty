@@ -2,7 +2,7 @@
 include "./includes/header.php";
 ?>
 <title>Lifi Inifinty - Contact Us</title>
-<section class="hero-section">
+<section class="contact-hero-section">
     <div class="left">
         <p id="name">
             LI-FI INFINITY
@@ -12,12 +12,12 @@ include "./includes/header.php";
         <p id="content">
             Let’s start a conversation. Drop us a message anytime.
         </p>
-        <button>Contact Us</button>
+        <button href="#reach-out" class="left-button">Contact Us</button>
     </div>
     <div class="right"><img src="./assets/heroImage.png" alt="" /></div>
 </section>
 
-<section class="contact-section">
+<section class="contact-section" id="reach-out">
     <h2>Let's Chat, Reach Out to Us</h2>
     <p>
         Your concern is our priority, send us a message and let us review your
@@ -40,7 +40,7 @@ include "./includes/header.php";
 <section class="contact-info">
     <h1>Contact Information</h1>
     <div class="contact-grid">
-        <div class="card office-card">
+        <div class="c-card office-card">
             <div class="card-header">
                 <i class="fas fa-map-marker-alt"></i>
                 <h2>Our office</h2>
@@ -51,7 +51,7 @@ include "./includes/header.php";
             </div>
         </div>
 
-        <div class="card phone-card">
+        <div class="c-card phone-card">
             <div class="card-header">
                 <i class="fas fa-phone"></i>
                 <h2>Phone</h2>
@@ -63,7 +63,7 @@ include "./includes/header.php";
             </div>
         </div>
 
-        <div class="card follow-card">
+        <div class="c-card follow-card">
             <div class="card-header">
                 <i class="fas fa-users"></i>
                 <h2>Follow Us</h2>

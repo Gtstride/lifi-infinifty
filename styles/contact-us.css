@@ -6,7 +6,7 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.hero-section {
+.contact-hero-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,7 @@
   font-size: 1.2rem;
 }
 
-.left button {
+.left-button {
   width: 30%;
   justify-self: center;
   padding: 0.9rem;
@@ -56,10 +56,11 @@
   font-size: 1.2rem;
   cursor: pointer;
   margin-top: 4rem;
+  text-decoration: none;
   transition: background 0.3s ease;
 }
 
-.left button:hover {
+#left-button:hover {
   background-color: #c96c1f;
 }
 
@@ -163,7 +164,7 @@ h1 {
   gap: 25px;
 }
 
-.card {
+.c-card {
   background-color: #ffffff;
   border-radius: 12px;
   padding: 30px;
@@ -173,9 +174,10 @@ h1 {
   text-align: center;
   border: 1px solid #7b2c7b;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
 }
 
-.card:hover {
+.c-card:hover {
   transform: translateY(-10px);
 }
 

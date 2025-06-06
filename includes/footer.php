@@ -8,7 +8,7 @@
             <h2 class="f-h2">Contacts</h2>
             <ul id="f-ul">
                 <li class="f-li">London, United Kingdom</li>
-                <li class="f-li"><a href="mailto:support@figma.com">support@figma.com</a></li>
+                <li class="f-li"><a href="mailto:lifinfinitylimited@gmail.com">support@figma.com</a></li>
                 <li class="f-li"><a href="tel:+1800854-36-80">+1 800 854-36-80</a></li>
             </ul>
             <div id="social-media">
@@ -32,6 +32,7 @@
     </div>
 </footer>
 <script src="./js/main.js"></script>
+<script src="./js/formsModal.js"></script>
 </body>
 
 </html>

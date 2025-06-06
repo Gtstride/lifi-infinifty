@@ -34,9 +34,17 @@
             <li class="nav-list"><a href="./contact-us.php">Contact Us</a></li>
         </ul>
         <div id="btn-holder">
-            <button>Partner With Us</button>
+            <button onclick="openModal('partner')">Partner With Us</button>
         </div>
         <img id="menu-icon" src="./assets/icons/menu-icon.png" alt="Menu Icon">
         <i class="fa fa-times-circle-o" id="close-icon"></i>
     </header>
     <img id="menu-icon2" src="./assets/icons/menu-icon.png" alt="Menu Icon">
+
+    <!-- modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modalContent">
+            <i id="close-btn" class="close-btn fa fa-times-circle-o" onclick="closeModal()"></i>
+            <div id="formContainer"></div>
+        </div>
+    </div>

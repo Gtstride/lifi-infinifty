@@ -63,12 +63,16 @@
   }
 }
 
+
 .explore-btn {
   background-color: #e28225;
   color: white;
-  padding: 15px 30px;
+  padding: 10px 15px;
   border-radius: 24px;
-  font-size: 1.2rem;
+  font-size: 16px;
+  text-align: center;
+  margin-left: -10px !important;
+  width: 200px !important;
   text-decoration: none;
   transition: background-color 0.3s ease;
   &:hover {
@@ -197,6 +201,7 @@
   font-size: 0.8rem;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
   transition: background-color 0.3s ease;
   &:hover {
     background-color: #e06b2c;
@@ -306,6 +311,22 @@
   }
   .built-for-container {
     padding-top: 1.5rem;
+  }
+
+  .hero-info {
+    margin-top: 200px;
+    padding: 10px;
+  }
+
+  .explore-btn{
+    margin-left: 18px !important;
+    font-size: 14px;
+    padding: 8px 12px;
+    width: 150px !important;
+  }
+
+  .image-bottom {
+    width: 80% !important;
   }
 }
 

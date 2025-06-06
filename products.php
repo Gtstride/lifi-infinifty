@@ -2,7 +2,7 @@
 include "./includes/header.php";
 ?>
 <title>Lifi Inifinty - Products</title>
-<section class="hero">
+<section class="p-hero">
     <div class="overlay">
         <div class="hero-content">
             <h2>Smarter Wireless Starts Here</h2>
@@ -27,7 +27,7 @@ include "./includes/header.php";
 
     <div class="card-container">
         <div class="cards">
-            <div class="card">
+            <div class="cardx">
 
                 <img
                     src="./assets/icons/internetInfrastructure.svg"
@@ -42,7 +42,7 @@ include "./includes/header.php";
                 </p>
             </div>
 
-            <div class="card purple">
+            <div class="cardx purple">
                 <img src="./assets/icons/consultancy.svg" alt="Consultancy" />
                 <h3>Li Fi consultancy</h3>
                 <p>
@@ -54,7 +54,7 @@ include "./includes/header.php";
                 </p>
             </div>
 
-            <div class="card">
+            <div class="cardx">
                 <img src="./assets/icons/kitSystem.svg" alt="Kit System" />
                 <h3>Li Fi kits system.</h3>
                 <p>
@@ -66,7 +66,7 @@ include "./includes/header.php";
                 </p>
             </div>
 
-            <div class="card purple">
+            <div class="cardx purple">
                 <img
                     src="./assets/icons/solutions.svg"
                     alt=" CybersecuritySolutions" />
