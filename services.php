@@ -5,7 +5,7 @@ include "./includes/header.php";
 <!-- Header content section -->
 <div class="header-content">
     <div id="services-hero">
-        <h1>LiFi MiFi HYBRID DEVICE: SMART, FAST, SECURE. POWERED BY LIGHT</h1>
+        <h1 id="services-h1">LiFi MiFi HYBRID DEVICE: SMART, FAST, SECURE. POWERED BY LIGHT</h1>
         <p>
             At LiFi Infinity, we're creating a groundbreaking LiFi MiFi device
             designed to turn light into high-speed wireless internet, making it
@@ -13,7 +13,7 @@ include "./includes/header.php";
             are engineered for seamless integration and exceptional performance.
         </p>
         <h2>WANT TO BE AMONG THE FIRST TO TRANSFORM YOUR CONNECTIVITY?</h2>
-        <button class="access-btn">Request Early Access</button>
+        <button class="access-btn"><a href="./contact-us.php#reach-out">Request Early Access</a></button>
     </div>
 </div>
 

@@ -10,7 +10,7 @@ include "./includes/header.php";
                 Whether you're deploying at scale or testing the tech, we offer
                 tailored LiFi services to meet your goals.
             </p>
-            <a href="#" class="btn-secondary">Explore Services</a>
+            <a href="./services.php" class="btn-secondary">Explore Services</a>
         </div>
     </div>
 </section>
@@ -91,7 +91,7 @@ include "./includes/header.php";
             Whether you're a business, institution, or tech innovator — we offer
             tailor-made LiFi solutions for your unique needs.
         </h2>
-        <a href="#" class="btn-primary">Partner With Us</a>
+        <a class="btn-primary" onclick="openModal('partner')">Partner With Us</a>
     </div>
 </section>
 

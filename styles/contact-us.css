@@ -26,8 +26,14 @@
   font-size: 1.3rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-size: 1.2rem;
+  background-color: white;
+  width: 30%;
+  border-radius: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 #name img {
@@ -39,10 +45,24 @@
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 2rem;
+  color: white !important;
 }
 
 .left p {
   font-size: 1.2rem;
+}
+
+.c-contact {
+  color: white;
+}
+
+#c-anchor {
+  color: white;
+  text-decoration: none;
+}
+
+#c-anchor:visited {
+  color: white;
 }
 
 .left-button {

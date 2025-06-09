@@ -14,7 +14,8 @@ include "./includes/header.php";
           </div>
 
         </div>
-        <p class="hero-head">redefining internet connectivity <span>— with light</span></p>
+        <p class="hero-head">redefining internet connectivity</p>
+        <span class="hero-span">— WITH LIGHT</span>
         <p class="hero-description">
           Experience ultra-fast, secure and interference-free wireless communication powered by Li-Fi technology.
         </p>
@@ -73,7 +74,7 @@ include "./includes/header.php";
           <p>Discover our range of LiFi-powered services designed for speed, security, and scale.</p>
         </div>
         <div class="built-for-viewmore">
-          <a class="view-more-btn" href="">View More <img src="./assets/icons/arrowleft.svg" alt=""></a>
+          <a class="view-more-btn" href="./services.php">View More <img src="./assets/icons/arrowleft.svg" alt=""></a>
         </div>
       </div>
       <div class="card-container">
@@ -271,109 +272,109 @@ include "./includes/header.php";
         Whether you're a business, institution, or tech innovator — we offer
         tailor-made LiFi solutions for your unique needs.
       </h2>
-      <a href="#" class="btn-primary">Partner With Us</a>
+      <a class="btn-primary" onclick="openModal('partner')">Partner With Us</a>
     </div>
   </section>
 </main>
 
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const wrapper = document.querySelector(".cards-wrapper");
-    const carousel = document.querySelector(".carousel");
-    const cards = Array.from(wrapper.children);
-    const dotsContainer = document.querySelector(".dots");
-    const prevBtn = document.querySelector(".chevron-left");
-    const nextBtn = document.querySelector(".chevron-right");
+//   document.addEventListener("DOMContentLoaded", function() {
+//     const wrapper = document.querySelector(".cards-wrapper");
+//     const carousel = document.querySelector(".carousel");
+//     // const cards = Array.from(wrapper.children);
+//     const dotsContainer = document.querySelector(".dots");
+//     const prevBtn = document.querySelector(".chevron-left");
+//     const nextBtn = document.querySelector(".chevron-right");
 
-    let currentIndex = 0;
-    let cardWidth = 0;
-    let gap = 0;
-    let carouselElementWidth = 0;
-    let wrapperScrollWidth = 0;
+//     let currentIndex = 0;
+//     let cardWidth = 0;
+//     let gap = 0;
+//     let carouselElementWidth = 0;
+//     let wrapperScrollWidth = 0;
 
-    function measureElements() {
-      if (cards.length > 0) {
-        cardWidth = cards[0].offsetWidth;
-        gap = parseInt(getComputedStyle(wrapper).gap);
-      }
-      carouselElementWidth = carousel.offsetWidth;
-      wrapperScrollWidth = wrapper.scrollWidth;
-    }
+//     function measureElements() {
+//       if (cards.length > 0) {
+//         cardWidth = cards[0].offsetWidth;
+//         gap = parseInt(getComputedStyle(wrapper).gap);
+//       }
+//       carouselElementWidth = carousel.offsetWidth;
+//       wrapperScrollWidth = wrapper.scrollWidth;
+//     }
 
-    measureElements();
-    window.addEventListener("resize", measureElements);
+//     measureElements();
+//     window.addEventListener("resize", measureElements);
 
-    cards.forEach((_, index) => {
-      const dot = document.createElement("button");
-      dot.className = "dot";
-      dot.dataset.index = index;
-      dotsContainer.appendChild(dot);
-    });
+//     cards.forEach((_, index) => {
+//       const dot = document.createElement("button");
+//       dot.className = "dot";
+//       dot.dataset.index = index;
+//       dotsContainer.appendChild(dot);
+//     });
 
-    const dots = Array.from(document.querySelectorAll(".dot"));
+//     const dots = Array.from(document.querySelectorAll(".dot"));
 
-    function updateCarousel() {
-      measureElements();
+//     function updateCarousel() {
+//       measureElements();
 
-      let transformX;
+//       let transformX;
 
-      const idealTransformX =
-        carouselElementWidth / 2 - (cards[currentIndex].offsetLeft + cardWidth / 2);
+//       const idealTransformX =
+//         carouselElementWidth / 2 - (cards[currentIndex].offsetLeft + cardWidth / 2);
 
-      const minPossibleTransformX = carouselElementWidth - wrapperScrollWidth;
-      const maxPossibleTransformX = 0;
+//       const minPossibleTransformX = carouselElementWidth - wrapperScrollWidth;
+//       const maxPossibleTransformX = 0;
 
-      if (wrapperScrollWidth <= carouselElementWidth) {
-        transformX = (carouselElementWidth - wrapperScrollWidth) / 2;
-      } else {
-        if (currentIndex === 0) {
-          transformX = 0;
-        } else if (currentIndex === cards.length - 1) {
-          transformX = minPossibleTransformX;
-        } else {
-          transformX = Math.min(
-            Math.max(idealTransformX, minPossibleTransformX),
-            maxPossibleTransformX
-          );
-        }
-      }
+//       if (wrapperScrollWidth <= carouselElementWidth) {
+//         transformX = (carouselElementWidth - wrapperScrollWidth) / 2;
+//       } else {
+//         if (currentIndex === 0) {
+//           transformX = 0;
+//         } else if (currentIndex === cards.length - 1) {
+//           transformX = minPossibleTransformX;
+//         } else {
+//           transformX = Math.min(
+//             Math.max(idealTransformX, minPossibleTransformX),
+//             maxPossibleTransformX
+//           );
+//         }
+//       }
 
-      wrapper.style.transform = `translateX(${transformX}px)`;
+//       wrapper.style.transform = `translateX(${transformX}px)`;
 
-      dots.forEach((dot, index) => {
-        if (index === currentIndex) {
-          dot.classList.add("active");
-        } else {
-          dot.classList.remove("active");
-        }
-      });
-    }
+//       dots.forEach((dot, index) => {
+//         if (index === currentIndex) {
+//           dot.classList.add("active");
+//         } else {
+//           dot.classList.remove("active");
+//         }
+//       });
+//     }
 
-    dots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        currentIndex = parseInt(dot.dataset.index);
-        updateCarousel();
-      });
-    });
+//     dots.forEach((dot) => {
+//       dot.addEventListener("click", () => {
+//         currentIndex = parseInt(dot.dataset.index);
+//         updateCarousel();
+//       });
+//     });
 
-    nextBtn.addEventListener("click", () => {
-      if (currentIndex < cards.length - 1) {
-        currentIndex++;
-        updateCarousel();
-      }
-    });
+//     nextBtn.addEventListener("click", () => {
+//       if (currentIndex < cards.length - 1) {
+//         currentIndex++;
+//         updateCarousel();
+//       }
+//     });
 
-    prevBtn.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
-    });
+//     prevBtn.addEventListener("click", () => {
+//       if (currentIndex > 0) {
+//         currentIndex--;
+//         updateCarousel();
+//       }
+//     });
 
-    updateCarousel();
-  });
-</script>
+//     updateCarousel();
+//   });
+// </script>
 <?php
 include "./includes/footer.php";
 ?>

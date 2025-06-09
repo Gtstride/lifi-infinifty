@@ -9,7 +9,7 @@ include "./includes/header.php";
             <img src="./assets/wireless_charging_icon.svg" alt="" />
         </p>
         <h2>CONTACT US</h2>
-        <p id="content">
+        <p id="content" class="c-contact">
             Let’s start a conversation. Drop us a message anytime.
         </p>
         <button href="#reach-out" class="left-button">Contact Us</button>
@@ -47,19 +47,17 @@ include "./includes/header.php";
             </div>
             <div class="card-content">
                 <p>LIFI Infinity</p>
-                <p>London, United Kingdom</p>
+                <p>Pippins, Cherry Drive, Forty Green, Beaconsfield, Buckinghamshire. HP9 1XP.</p>
             </div>
         </div>
 
         <div class="c-card phone-card">
             <div class="card-header">
-                <i class="fas fa-phone"></i>
-                <h2>Phone</h2>
+                <i class="fas fa-message"></i>
+                <h2>Email</h2>
             </div>
             <div class="card-content">
-                <p>Call: 080xxxxxxxxx</p>
-                <p>WhatsApp: 080xxxxxxxxx</p>
-                <p>Email: lifinfinitylimited@gmail.com</p>
+                <p><a id="c-anchor" href="mailto:contact@lifitn.com">contact@lifitn.com</a></p>
             </div>
         </div>
 

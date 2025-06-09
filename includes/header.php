@@ -44,7 +44,9 @@
     <!-- modal -->
     <div class="modal" id="modal">
         <div class="modal-content" id="modalContent">
-            <i id="close-btn" class="close-btn fa fa-times-circle-o" onclick="closeModal()"></i>
-            <div id="formContainer"></div>
+            <div id="formContainer">
+            </div>
         </div>
     </div>
+
+    <button id="scrollToTopBtn" title="Go to top">&#8679;</button>

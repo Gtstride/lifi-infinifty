@@ -59,12 +59,16 @@ include "./includes/header.php";
                 <img id="principle" src="./assets/images/People Working Together.svg" alt="principle logo">
                 <h1>Our working principle</h1>
             </span>
-            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <i class="fa fa-check-circle mark" aria-hidden="true"></i>
             <p>
                 The working principle of LiFi Infinity
                 Limited is quite similar to that of a Wi-Fi,
                 as both transmit and recieve data
-                electromagnetically. <br>The significant concept
+                electromagnetically.
+            </p>
+            <i class="fa fa-check-circle mark" aria-hidden="true"></i>
+            <p>
+                The significant concept
                 behind LiFi Infinity Limited’s product and
                 services is wireless data transmission through
                 illumination.
@@ -75,51 +79,56 @@ include "./includes/header.php";
                 <img id="solving" src="./assets/images/Creativity And Resourcefulness.svg" alt="solving logo">
                 <h1>The Problem We Are Solving</h1>
             </span>
-            <summary class="problem">
-                <i class="fa fa-check-circle" aria-hidden="true"></i>
-                <p>
-                    Growing demand for faster, more reliable,
-                    and secure wireless connectivity for data
-                    transmission in environment with high interference or security concerns.
-                </p>
-            </summary>
-            <summary class="problem">
-                <i class="fa fa-check-circle" aria-hidden="true"></i>
-                <p>
-                    LiFi offers a solution by utilising light
-                    waves for data transmission, providing
-                    faster, more secure interference-free
-                    connectivity.
-                </p>
-            </summary>
-            <summer class="problem">
-                <i class="fa fa-check-circle" aria-hidden="true"></i>
-                <p>
-                    Traditional wireless communication
-                    technologies face limitations in speed,
-                    security and reliability; existing Wi-Fi
-                    networks are congested, insecure and
-                    limitedin range
-                </p>
-            </summer>
+
+            <i class="fa fa-check-circle mark" aria-hidden="true"></i>
+            <p>
+                Growing demand for faster, more reliable,
+                and secure wireless connectivity for data
+                transmission in environment with high interference or security concerns.
+            </p>
+            <i class="fa fa-check-circle mark" aria-hidden="true"></i>
+
+            <p>
+                LiFi offers a solution by utilising light
+                waves for data transmission, providing
+                faster, more secure interference-free
+                connectivity.
+            </p>
+            <i class="fa fa-check-circle mark" aria-hidden="true"></i>
+
+            <p>
+                Traditional wireless communication
+                technologies face limitations in speed,
+                security and reliability; existing Wi-Fi
+                networks are congested, insecure and
+                limitedin range
+            </p>
         </div>
         <div>
             <span>
                 <img id="solution" src="./assets/images/Idea Sharing.svg" alt="solution logo">
                 <h1>The Solution</h1>
             </span>
-            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <i class="fa fa-check-circle mark" aria-hidden="true"></i>
             <p>
                 LiFi Infinity Limited offers cutting-edge
                 LiFi-enabled solutions for various industries.
+            </p>
+            <i class="fa fa-check-circle mark" aria-hidden="true"></i>
+            <p>
                 Our innovative devices seamlessly integrate
                 into existing lighting infrastructure,transforming ordinary LED lights into high speed
-                data transmitters. With LiFi, users can enjoy lighning-fast internet connectivity while
+                data transmitters.
+            </p>
+            <i class="fa fa-check-circle mark" aria-hidden="true"></i>
+
+            <p>
+                With LiFi, users can enjoy lighning-fast internet connectivity while
                 benefiting from enhanced security and reliability.
             </p>
         </div>
     </section>
-    <button class="exp-btn">Explore More</button>
+    <button class="exp-btn"><a href="./services.php">Explore More</a></button>
 </main>
 <?php
 include "./includes/footer.php";
