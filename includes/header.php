@@ -23,9 +23,9 @@
 </head>
 
 <body>
-    <img id="logo2" src="./assets/images/logo.svg" alt="LiFi logo">
+    <img id="logo2" src="./assets/images/logo.svg" alt="LiFi logo" class="logo">
     <header id="header">
-        <img id="logo" src="./assets/images/logo.svg" alt="LiFi logo">
+        <img id="logo" src="./assets/images/logo.svg" alt="LiFi logo" class="logo">
         <ul id="nav-ul">
             <li class="nav-list"><a href="./index.php">Home</a></li>
             <li class="nav-list"><a href="./about-us.php">About Us</a></li>

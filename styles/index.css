@@ -97,12 +97,6 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  @media (max-width: 768px) {
-    .lifi-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
 }
 
 .lifi-images{
@@ -495,8 +489,34 @@
   }
 
   .image-bottom {
-    width: 80% !important;
+    display: none;
   }
+
+  
+.lifi-container {
+flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.lifi-images{
+  margin-top: 30px;
+  height: auto;
+  width: 100% !important;
+}
+
+.lifi-images img {
+  width: 100%;
+  height: 310px;
+}
+
+
+.image-top {
+  position: relative;
+  left: 0px;
+  bottom: 15px;
+  width: 100%;
+}
 
 .cards{
   width: 80% !important;
@@ -563,6 +583,8 @@
   .hero-description{
     margin-bottom: 50px;
   }
+
+
 }
 
 @media (max-width: 600px) {
@@ -606,43 +628,4 @@
     height: 30px;
   }
 }
-
-.cta {
-  position: relative;
-  background: url("./assets/img/service.png") no-repeat center center/cover;
-  height: auto !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 25px;
-  /* margin: 40px; */
-  overflow: hidden;
-}
-
-.cta-overlay {
-  background: linear-gradient(120deg, #ff543e, #9c3d7d);
-  opacity: 0.9;
-  /* padding: 40px; */
-  text-align: center;
-  color: white;
-  width: 100%;
-}
-
-.cta h2 {
-  font-size: 1.6rem;
-  text-align: center;
-  color: #fff;
-  margin-top: -10px !important;
-}
-
-.cta .btn-primary {
-  background-color: #e28225;
-  padding: 12px 25px;
-  font-weight: bold;
-  border-radius: 30px;
-  text-decoration: none;
-  color: #fff;
-  cursor: pointer;
-}
-
 

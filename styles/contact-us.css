@@ -54,6 +54,7 @@
 
 .c-contact {
   color: white;
+  margin-bottom: 40px;
 }
 
 #c-anchor {
@@ -66,7 +67,7 @@
 }
 
 .left-button {
-  width: 30%;
+  width: 250px;
   justify-self: center;
   padding: 0.9rem;
   background-color: #e08027;
@@ -75,12 +76,12 @@
   border-radius: 50px;
   font-size: 1.2rem;
   cursor: pointer;
-  margin-top: 4rem;
+  margin-top: 5rem;
   text-decoration: none;
   transition: background 0.3s ease;
 }
 
-#left-button:hover {
+.left-button:hover {
   background-color: #c96c1f;
 }
 

@@ -12,7 +12,7 @@ include "./includes/header.php";
         <p id="content" class="c-contact">
             Let’s start a conversation. Drop us a message anytime.
         </p>
-        <button href="#reach-out" class="left-button">Contact Us</button>
+        <a href="#reach-out" class="left-button">Send A Message</a>
     </div>
     <div class="right"><img src="./assets/heroImage.png" alt="" /></div>
 </section>

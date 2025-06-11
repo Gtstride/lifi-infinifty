@@ -60,4 +60,13 @@ $(document).ready(function () {
   scrollBtn.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  //  set logo as home screen
+  let logoIcons = document.querySelectorAll(".logo");
+
+  logoIcons.forEach((el) => {
+    el.addEventListener("click", () => {
+      window.location.href = "./index.php";
+    });
+  });
 });
