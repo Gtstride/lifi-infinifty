@@ -1,0 +1,134 @@
+.header-content {
+  background-image: url("../assets/images/bg-image.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding-top: 200px;
+}
+
+#services-hero {
+  width: 80%;
+  margin-left: 4%;
+  color: white;
+}
+
+#services-hero h1 {
+  margin-bottom: 30px;
+  line-height: 45px;
+  color: white;
+}
+
+#services-h1 {
+  color: white !important;
+}
+#services-hero p {
+  margin-bottom: 30px;
+}
+
+.partner-btn,
+.access-btn {
+  background-color: #e28225;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.access-btn {
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.access-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.access-btn a:visited {
+  color: white;
+}
+
+.access-btn:hover {
+  background-color: #d37211;
+}
+
+/* Section Heading */
+h4 {
+  text-align: center;
+  color: #9c3d7d;
+  font-size: 2rem;
+  font-weight: 800;
+  padding-bottom: 10px;
+  margin-top: 80px;
+}
+
+/* Services Section */
+.service-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  margin: 20px auto;
+  background: white;
+  flex-wrap: wrap;
+  width: 95%;
+}
+
+.service-image {
+  flex-shrink: 0;
+  max-width: 250px;
+  width: 100%;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.service-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.service-content h5 {
+  font-size: 1.5rem;
+  color: rgb(156, 61, 125);
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.service-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-content {
+    font-size: 0.95rem;
+    padding-top: 150px;
+    padding-bottom: 40px;
+  }
+
+  .service-1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-content h5 {
+    font-size: 1.3rem;
+  }
+
+  .service-content p {
+    font-size: 0.95rem;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

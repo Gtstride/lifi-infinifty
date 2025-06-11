@@ -10,13 +10,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/about-us.css">
+    <link rel="stylesheet" href="./styles/services.css">
+    <link rel="stylesheet" href="./styles/products.css">
+    <link rel="stylesheet" href="./styles/contact-us.css" />
+    <link rel="stylesheet" href="./styles/querie.css" />
+    <script
+        src="https://kit.fontawesome.com/47c9f80a38.js"
+        crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <img id="logo2" src="./assets/images/logo.svg" alt="LiFi logo">
+    <img id="logo2" src="./assets/images/logo.svg" alt="LiFi logo" class="logo">
     <header id="header">
-        <img id="logo" src="./assets/images/logo.svg" alt="LiFi logo">
+        <img id="logo" src="./assets/images/logo.svg" alt="LiFi logo" class="logo">
         <ul id="nav-ul">
             <li class="nav-list"><a href="./index.php">Home</a></li>
             <li class="nav-list"><a href="./about-us.php">About Us</a></li>
@@ -25,9 +34,19 @@
             <li class="nav-list"><a href="./contact-us.php">Contact Us</a></li>
         </ul>
         <div id="btn-holder">
-            <button>Partner With Us</button>
+            <button onclick="openModal('partner')">Partner With Us</button>
         </div>
         <img id="menu-icon" src="./assets/icons/menu-icon.png" alt="Menu Icon">
         <i class="fa fa-times-circle-o" id="close-icon"></i>
     </header>
     <img id="menu-icon2" src="./assets/icons/menu-icon.png" alt="Menu Icon">
+
+    <!-- modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modalContent">
+            <div id="formContainer">
+            </div>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
