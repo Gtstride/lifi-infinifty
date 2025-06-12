@@ -69,4 +69,9 @@ $(document).ready(function () {
       window.location.href = "./index.php";
     });
   });
+
+  setTimeout(() => {
+    const msg = document.getElementById("msg");
+    if (msg) msg.style.display = "none";
+  }, 5000); // hides after 5s
 });

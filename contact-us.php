@@ -24,15 +24,16 @@ include "./includes/header.php";
         needs
     </p>
 
-    <form class="contact-form">
-        <input type="text" placeholder="First name" required />
-        <input type="text" placeholder="Last Name" required />
+    <form class="contact-form" method="POST" action="./database/contactController.php">
+        <input type="text" name="full_name" placeholder="First & Last Names" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
         <input
+            name="email"
             type="email"
             placeholder="Email Address"
             class="full-width"
             required />
-        <textarea placeholder="Message" rows="5" required></textarea>
+        <textarea name="msg" placeholder="Message" rows="5" required></textarea>
         <button type="submit">Send message</button>
     </form>
 </section>

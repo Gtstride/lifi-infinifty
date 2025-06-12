@@ -204,55 +204,63 @@ function openModal(type) {
   if (type === "investor") {
     formContainer.innerHTML = `
       <h2>Investor Form</h2>
-      <form class="modal-form" id="investor-form">
-        <i id="close-btn" class="close-btn fa fa-times-circle-o" onclick="closeModal()"></i>
-          <label>Full Name *</label>
-        <input type="text" required placeholder="Eg. John Doe"/>
-        <label>Business / Company Name *</label>
-        <input type="text" required placeholder="Eg. Oraze Limited/John Doe"/>
+      <form class="modal-form" id="investor-form" method="POST" action="./database/investorsController.php">
+      <i id="close-btn" class="close-btn fa fa-times-circle-o" onclick="closeModal()"></i>
+    <label>Full Name *</label>
+    <input type="text" name="full_name" required placeholder="Eg. John Doe"/>
 
-        <label>Email Address *</label>
-        <input type="email" required placeholder="Eg. john@example.com"/>
+    <label>Business / Company Name *</label>
+    <input type="text" name="company_name" required placeholder="Eg. Oraze Limited/John Doe"/>
 
-        <label>Phone Number (optional)</label>
-        <input type="tel" placeholder="+2347072086182"/>
+    <label>Email Address *</label>
+    <input type="email" name="email" required placeholder="Eg. john@example.com"/>
 
-        <label for="country">Country / Location *</label>
-        <select id="country1" required>
-          <option value="">Select your country</option>
-        </select>
+    <label>Phone Number (optional)</label>
+    <input type="tel" name="phone" placeholder="+2347072086182"/>
 
-        <label>LinkedIn Profile (optional)</label>
-        <input type="url" placeholder="https://"/>
+    <label for="country">Country / Location *</label>
+    <select id="country1" name="country" required>
+      <option value="">Select your country</option>
+    </select>
 
-        <label>Type of Investor</label>
-        <div id="investor-options">
-          <label class="checkbox-label"><input type="checkbox" name="investor_type" class="investor-checkbox" value="Angel Investor" /> Angel Investor</label><br />
-          <label class="checkbox-label"><input type="checkbox" name="investor_type" class="investor-checkbox" value="Venture Capitalist" /> Venture Capitalist</label><br />
-          <label class="checkbox-label"><input type="checkbox" name="investor_type" class="investor-checkbox" value="Private Equity" /> Private Equity</label><br />
-          <label class="checkbox-label"><input type="checkbox" name="investor_type" class="investor-checkbox" value="Institutional Investor" /> Institutional Investor</label><br />
-          <label class="checkbox-label"><input type="checkbox" name="investor_type" class="investor-checkbox" value="Other" /> Other <input type="text" class="other" /></label>
-        </div>
+    <label>LinkedIn Profile (optional)</label>
+    <input type="url" name="linkedin" placeholder="https://"/>
 
-        <label>Amount Interested in Investing (£)</label>
-        <input type="number" required place="0"/>
+   <label>Type of Investor</label>
+<div id="investor-options">
+  <label><input class="investor-checkbox" type="checkbox" name="investor_type[]" value="Angel Investor" /> Angel Investor</label><br />
+  <label><input class="investor-checkbox" type="checkbox" name="investor_type[]" value="Venture Capitalist" /> Venture Capitalist</label><br />
+  <label><input class="investor-checkbox" type="checkbox" name="investor_type[]" value="Private Equity" /> Private Equity</label><br />
+  <label><input class="investor-checkbox" type="checkbox" name="investor_type[]" value="Institutional Investor" /> Institutional Investor</label><br />
+  <label>
+    <input class="investor-checkbox" type="checkbox" name="investor_type[]" value="Other" id="otherCheckbox" />
+    Other <input type="text" name="other_investor_type" id="otherInvestorInput" placeholder="Please specify" class="other" />
+  </label>
+</div>
+    <label>Amount Interested in Investing (£) *</label>
+    <input type="number" name="amount" required placeholder="0"/>
 
-        <label>Stage of Business (e.g. Seed, Series A...)</label>
-        <input type="text" required />
-        <label>Industry Interests</label>
-        <input type="text" placeholder="Enter Industry"/>
+    <label>Stage of Business (e.g. Seed, Series A...) *</label>
+    <input placeholder="Enter Business stage" type="text" name="business_stage" required />
 
-        <label>How Did You Hear About Us?</label>
-        <input type="text" placeholder="LinkedIn, Facebook, Friends etc..."/>
+    <label>Industry Interests(optional)</label>
+    <input type="text" name="industry" placeholder="Enter Industry"/>
 
-        <label>Additional Comments or Questions</label>
-        <textarea rows="8"></textarea>
+    <label>How Did You Hear About Us? *</label>
+    <input required type="text" name="referral" placeholder="LinkedIn, Facebook, Friends etc..."/>
 
-        <label><input type="checkbox" required /> I acknowledge that this is an expression of interest and not a binding agreement.</label>
-        <label><input type="checkbox" required /> I consent to be contacted by Lifi Infinity regarding investment opportunities.</label>
+    <label>Additional Comments or Questions(optional)</label>
+    <p>
+    <textarea name="comments" class="textarea" placholder="Start typing..."></textarea>
+    </p>
+    
 
-        <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
-      </form>`;
+    <label><input type="checkbox" name="acknowledge" required /> I acknowledge this is an expression of interest and not a binding agreement.</label>
+    <label><input type="checkbox" name="consent" required /> I consent to be contacted by Lifi Infinity.</label>
+
+    <button type="submit" class="submit-btn" id="submit-btn">Submit</button>
+</form>
+`;
 
     // closeBtn.style.display = "block";
 
@@ -294,65 +302,113 @@ function openModal(type) {
           alert("Please select at least one type of investor.");
         }
       });
+    const investorCheckboxes = document.querySelectorAll(".investor-checkbox");
+    const otherCheckbox = document.getElementById("otherCheckbox");
+    const otherInput = document.getElementById("otherInvestorInput");
+
+    investorCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", function () {
+        if (otherCheckbox.checked) {
+          otherInput.disabled = false;
+          otherInput.required = true;
+        } else {
+          otherInput.disabled = true;
+          otherInput.required = false;
+          otherInput.value = "";
+        }
+      });
+    });
   } else {
     formContainer.innerHTML = `
     <h2>Partnership Form</h2>
-    <form class="modal-form">
-      <i id="close-btn" class="close-btn fa fa-times-circle-o" onclick="closeModal()"></i>
-      <label>Full Name *</label>
-      <input type="text" required placeholder="Enter your name"/>
+    <form class="modal-form" id="partnership-form" action="./database/partnershipController.php" method="POST">
+  <i id="close-btn" class="close-btn fa fa-times-circle-o" onclick="closeModal()"></i>
 
-      <label>Organization / Business Name *</label>
-      <input type="text" required placeholder="Eg. Oraze Limited/John Doe"/>
+  <label>Full Name *</label>
+  <input type="text" name="full_name" required placeholder="Enter your name" />
 
-      <label>Business Email Address *</label>
-      <input type="email" required placeholder="Eg. doe@example.com"/>
+  <label>Organization / Business Name *</label>
+  <input type="text" name="company_name" required placeholder="Eg. Oraze Limited/John Doe" />
 
-      <label>Phone Number(optional)</label>
-      <input type="tel" required placeholder="Eg. +2347062086182"/>
+  <label>Business Email Address *</label>
+  <input type="email" name="email" required placeholder="Eg. doe@example.com" />
 
-      <label>Website / Portfolio Link(optional)</label>
-      <input type="url" placeholder="Eg. https://"/>
+  <label>Phone Number (optional)</label>
+  <input type="tel" name="phone" placeholder="Eg. +2347062086182" />
 
-       <label for="country">Country / Location *</label>
-        <select id="country2" required>
-          <option value="">Select your country</option>
-        </select>
+  <label>Website / Portfolio Link (optional)</label>
+  <input type="url" name="website" placeholder="Eg. https://" />
 
-      <label>Type of Partnership *</label>
-      <div>
-        <label class="checkbox-label"><input type="checkbox" /> Strategic Partnership</label><br />
-        <label class="checkbox-label"><input type="checkbox" /> Technology Integration</label><br />
-        <label class="checkbox-label"><input type="checkbox" /> Marketing/Promotion</label><br />
-        <label class="checkbox-label"><input type="checkbox" /> Affiliate Partnership</label><br />
-        <label class="checkbox-label"><input type="checkbox" /> Content Collaboration</label><br />
-        <label class="checkbox-label"><input type="checkbox" /> Other <input type="text" class="other"/></label>
-      </div>
+  <label for="country">Country / Location *</label>
+  <select id="country2" name="country" required>
+    <option value="">Select your country</option>
+  </select>
 
-      <label>Brief Description of Your Business *</label>
-      <textarea rows="8" required placeholder="Start typing"></textarea>
+  <label>Type of Partnership *</label>
+  <div>
+    <label class="checkbox-label">
+      <input class="partnership-checkbox" type="checkbox" name="partnership_type[]" value="Strategic Partnership" />
+      Strategic Partnership
+    </label><br />
 
-      <label>Industry *</label>
-      <input type="text" placeholder="Enter your industry" required/>
+    <label class="checkbox-label">
+      <input class="partnership-checkbox" type="checkbox" name="partnership_type[]" value="Technology Integration" />
+      Technology Integration
+    </label><br />
 
-      <label>Years in Operation (optional)</label>
-      <input type="number" placeholder="0"/>
+    <label class="checkbox-label">
+      <input class="partnership-checkbox" type="checkbox" name="partnership_type[]" value="Marketing/Promotion" />
+      Marketing/Promotion
+    </label><br />
 
-      <label>What Kind of Collaboration Are You Seeking? *</label>
-      <textarea rows="3" required placeholder="start typing"></textarea>
+    <label class="checkbox-label">
+      <input class="partnership-checkbox" type="checkbox" name="partnership_type[]" value="Affiliate Partnership" />
+      Affiliate Partnership
+    </label><br />
 
-      <label>How Do You See This Partnership Being Mutually Beneficial? *</label>
-      <textarea rows="8" required placeholder="Start typing..."></textarea>
+    <label class="checkbox-label">
+      <input class="partnership-checkbox" type="checkbox" name="partnership_type[]" value="Content Collaboration" />
+      Content Collaboration
+    </label><br />
 
+    <label class="checkbox-label">
+      <input id="otherCheckbox" class="partnership-checkbox" type="checkbox" name="partnership_type[]" value="Other" />
+      Other <input id="otherPartnershipInput"  type="text" name="other_partnership_type" class="other" placeholder="Please specify" />
+    </label>
+  </div>
 
-      <label>Additional Comments(optional)</label>
-      <textarea rows="8" placeholder="Start typing..."></textarea>
+  <label>Brief Description of Your Business *</label>
+  <p>
+    <textarea class="textarea" name="business_description" required placeholder="Start typing"></textarea>
+  </p>
 
-      <label><input type="checkbox" require/> I confirm that the information provided is accurate.</label>
-      <label><input type="checkbox" require/> I consent to being contacted regarding this partnership request.</label>
+  <label>Industry *</label>
+  <input type="text" name="industry" placeholder="Enter your industry" required />
 
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>`;
+  <label>Years in Operation (optional)</label>
+  <input type="number" name="years_in_industry" placeholder="0" />
+
+  <label>What Kind of Collaboration Are You Seeking? *</label>
+  <p>
+    <textarea class="textarea" name="collaboration_type" required placeholder="Start typing"></textarea>
+  </p>
+
+  <label>How Do You See This Partnership Being Mutually Beneficial? *</label>
+  <p>
+    <textarea class="textarea" name="mutual_benefit" required placeholder="Start typing..."></textarea>
+  </p>
+
+  <label>Additional Comments (optional)</label>
+  <p>
+    <textarea class="textarea" name="comments" placeholder="Start typing..."></textarea>
+  </p>
+
+  <label><input type="checkbox" required /> I confirm that the information provided is accurate.</label>
+  <label><input type="checkbox" required /> I consent to being contacted regarding this partnership request.</label>
+
+  <button type="submit" class="submit-btn">Submit</button>
+</form>
+`;
     // --- COUNTRY DROPDOWN SETUP ---
     const select2 = document.getElementById("country2");
 
@@ -367,6 +423,38 @@ function openModal(type) {
     }
 
     populateCountries2(countries);
+
+    // --- INVESTOR CHECKBOX VALIDATION ---
+    document
+      .getElementById("partnership-form")
+      .addEventListener("submit", function (e) {
+        const checkboxes2 = document.querySelectorAll(".partnership-checkbox");
+        const isChecked2 = Array.from(checkboxes2).some(
+          (checkbox) => checkbox.checked
+        );
+        if (!isChecked2) {
+          e.preventDefault();
+          alert("Please select at least one type of Partner.");
+        }
+      });
+    const partnershipCheckboxes = document.querySelectorAll(
+      ".partnership-checkbox"
+    );
+    const otherCheckbox2 = document.getElementById("otherCheckbox");
+    const otherInput2 = document.getElementById("otherPartnershipInput");
+
+    partnershipCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", function () {
+        if (otherCheckbox2.checked) {
+          otherInput2.disabled = false;
+          otherInput2.required = true;
+        } else {
+          otherInput2.disabled = true;
+          otherInput2.required = false;
+          otherInput2.value = "";
+        }
+      });
+    });
   }
 }
 

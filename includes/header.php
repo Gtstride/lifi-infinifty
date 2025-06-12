@@ -50,3 +50,14 @@
     </div>
 
     <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+    <?php session_start(); ?>
+
+    <?php if (isset($_SESSION['form_status'])): ?>
+        <div id="msg" style="margin-bottom: 15px;
+        color: <?= $_SESSION['form_status']['type'] === 'success' ? '#FFFFFF' : '#721c24'; ?>;
+        background-color: <?= $_SESSION['form_status']['type'] === 'success' ? 'rgb(30, 200, 30)' : '#f8d7da'; ?>;
+        border: 1px solid <?= $_SESSION['form_status']['type'] === 'success' ? '#c3e6cb' : '#f5c6cb'; ?>;">
+            <?= $_SESSION['form_status']['message'] ?>
+        </div>
+        <?php unset($_SESSION['form_status']); ?>
+    <?php endif; ?>
