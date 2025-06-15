@@ -18,13 +18,13 @@
             </div>
         </div>
         <div class="footer">
-            <form>
+            <form method="POST" action="./database/contactController.php">
                 <h2 class="f-h2">Contact Us</h2>
-                <p><input type="text" class="f-input" placeholder="First and Last Names"></p>
-                <p><input type="text" class="f-input" placeholder="Email Address"></p>
-                <p><input type="text" class="f-input" placeholder="Phone Number"></p>
+                <p><input name="full_name" type="text" class="f-input" placeholder="First and Last Names" required></p>
+                <p><input name="email" type="text" class="f-input" placeholder="Email Address" required></p>
+                <p><input name="phone" type="text" class="f-input" placeholder="Phone Number" required></p>
                 <p>
-                    <textarea placeholder="Message" rows="3"></textarea>
+                    <textarea name="msg" placeholder="Message" rows="3" required></textarea>
                 </p>
                 <div id="f-button-div"><input type="submit" id="f-button" value="Submit"></div>
             </form>

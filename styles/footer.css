@@ -84,6 +84,7 @@ footer {
 #f-button-div {
   width: 40%;
   margin: 20px auto 0px;
+  cursor: pointer !important;
 }
 
 #f-button {
@@ -92,6 +93,7 @@ footer {
   color: white;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  cursor: pointer !important;
 }
 
 /* responsive design */
